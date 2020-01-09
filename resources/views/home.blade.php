@@ -54,7 +54,7 @@
                     @endif
                     <ol>
                     @foreach($tasks as $task)
-                        <li><b>Task Name</b> : {{$task->task_name}} <b>Due Date</b> : {{$task->due_date}} 
+                        <li><b>User Name</b> : {{$task->users['name']}} <b>Task Name</b> : {{$task->task_name}} <b>Due Date</b> : {{$task->due_date}} 
                         <b style="color:red"> @if ($task->due_date < now()) {{ 'Past Due Date' }}@endif </b>
                         <a href="delete-task/{{$task->id}}">Delete</a> <a href="view-task/{{$task->id}}">View</a> </li>
                     @endforeach
